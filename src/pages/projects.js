@@ -83,7 +83,7 @@ const projects = () => {
 								summary='Myself Portfolio Website using NextJS, Tailwind CSS, Framer Motion. 
 '
 								link='/'
-								github='/'
+								github='https://github.com/annali-SDE/anna-portfolio'
 								type='Featured Project'
 							/>
 						</div>
