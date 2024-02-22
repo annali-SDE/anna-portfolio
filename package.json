@@ -1,7 +1,7 @@
 {
-  "name": "developer-portfolio-starter-code",
+  "name": "annali-portfolio",
   "version": "0.1.0",
-  "private": true,
+  "description": "",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -49,7 +49,7 @@ const About = () => {
 								Biography
 							</h2>
 							<p className='font-medium'>
-								Hi, I'm Anna, a software developer with 5+ years of experience
+								Hi, I am Anna, a software developer with 5+ years of experience
 								developing innovative software solutions and applications for
 								enterprise customers.
 							</p>
