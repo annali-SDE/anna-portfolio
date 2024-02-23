@@ -4,7 +4,7 @@ import Image from 'next/image';
 import profilePic from '../../public/images/profile/developer-pic-4.png';
 import AnimatedText from '@/components/AnimatedText';
 import Link from 'next/link';
-import { LinkArrow } from '@/components/Icons';
+import { LinkDownload } from '@/components/Icons';
 import HireMe from '@/components/HireMe';
 
 export default function Home() {
@@ -46,7 +46,7 @@ export default function Home() {
 									className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light md:p-2 md:px-4 md:text-base'
 									download={true}
 								>
-									Resume <LinkArrow className='w-6 ml-1' />
+									Resume <LinkDownload className='w-6 ml-1 dark:text-dark' />
 								</Link>
 								<Link
 									href='mailto:annalideveloper@gmail.com'

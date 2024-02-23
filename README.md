@@ -2,9 +2,7 @@
 
 # Portfolio Website: Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
 
-[Anna Li Portfolio Website](https://annali.dev) <br />
-
-### Images of The Portfolio Website:
+[Anna Li Portfolio Website](https://www.annali.dev) <br />
 
 ### Resources Used in This Project
 

@@ -82,7 +82,7 @@ const projects = () => {
 								img={portfolio}
 								summary='Myself Portfolio Website using NextJS, Tailwind CSS, Framer Motion. 
 '
-								link='/'
+								link='https://www.annali.dev'
 								github='https://github.com/annali-SDE/anna-portfolio'
 								type='Featured Project'
 							/>

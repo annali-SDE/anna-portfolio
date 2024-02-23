@@ -393,6 +393,47 @@ export const LinkArrow = ({ className, ...rest }) => (
 	</svg>
 );
 
+export const LinkDownload = ({ className, ...rest }) => (
+	<svg
+		xmlns='http://www.w3.org/2000/svg'
+		viewBox='0 0 24 24'
+		height='24'
+		width='24'
+		className={`w-full h-auto ${className}`}
+		id='Download-3--Streamline-Cyber.svg'
+		{...rest}
+	>
+		<desc>Download 3 Streamline Icon: https://streamlinehq.com</desc>
+		<path
+			fill='none'
+			stroke='currentColor'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+			stroke-miterlimit='10'
+			d='M22.5 18.5v5H0.5v-5'
+			stroke-width={2}
+		></path>
+		<path
+			fill='none'
+			stroke='currentColor'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+			stroke-miterlimit='10'
+			d='M11.5 17.5v-16'
+			stroke-width={2}
+		></path>
+		<path
+			fill='none'
+			stroke='currentColor'
+			stroke-linecap='round'
+			stroke-linejoin='round'
+			stroke-miterlimit='10'
+			d='m16 13 -4.5 4.5L7 13'
+			stroke-width={2}
+		></path>
+	</svg>
+);
+
 export const CircularText = ({ className, ...rest }) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
