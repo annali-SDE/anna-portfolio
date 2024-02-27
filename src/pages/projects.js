@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { GithubIcon } from '@/components/Icons';
 import portfolio from '../../public/images/projects/portfolio-pj.png';
+import aiImageGenerator from '../../public/images/projects/ai-image-generator.png';
 import { motion } from 'framer-motion';
 
 const FramerImage = motion(Image);
@@ -62,6 +63,42 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 	);
 };
 
+const GithubProject = ({ type, title, summary, img, github }) => {
+	return (
+		<article className='relative w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl dark:bg-dark dark:border-light lg:flex-col lg:p-8 xs:rounded-2xl xs: roubded-br-3xl xs:p-4'>
+			<div className='absolute top-0 -right-4 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light xs:-right-2 xs:h-[102%] xs:w-full xs:rounded-[1.5rem]' />
+			<div className='w-1/2 coursor-pointer overflow-hidden rounded-lg lg:w-full'>
+				<FramerImage
+					src={img}
+					alt={title}
+					className='w-full h-auto'
+					whileHover={{ scale: 1.05 }}
+					transition={{ duration: 0.2 }}
+					priority
+					sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
+				/>
+			</div>
+
+			<div className='w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6'>
+				<span className='text-primary dark:text-primaryDark font-medium text-xl xs:text-base'>
+					{type}
+				</span>
+				<h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm'>
+					{title}
+				</h2>
+				<p className='my-2 font-medium text-dark dark:text-light sm:text-sm'>
+					{summary}
+				</p>
+				<div className='mt-2 flex items-center'>
+					<Link href={github} target='_blank' className='w-10'>
+						<GithubIcon />
+					</Link>
+				</div>
+			</div>
+		</article>
+	);
+};
+
 const projects = () => {
 	return (
 		<>
@@ -85,6 +122,15 @@ const projects = () => {
 								link='https://www.annali.dev'
 								github='https://github.com/annali-SDE/anna-portfolio'
 								type='Featured Project'
+							/>
+						</div>
+						<div className='col-span-12'>
+							<GithubProject
+								title='AI Image Generator'
+								img={aiImageGenerator}
+								summary='Mini project using React and OpenAI API to generate images.'
+								github='https://github.com/annali-SDE/ai-image-generator'
+								type='Mini Project'
 							/>
 						</div>
 					</div>
