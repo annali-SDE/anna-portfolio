@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { GithubIcon } from '@/components/Icons';
 import portfolio from '../../public/images/projects/portfolio-pj.png';
 import aiImageGenerator from '../../public/images/projects/ai-image-generator.png';
+import advancedAnimations from '../../public/images/projects/advanced-animations.png';
 import { motion } from 'framer-motion';
 
 const FramerImage = motion(Image);
@@ -117,11 +118,20 @@ const projects = () => {
 							<FeaturedProject
 								title='Self Portfolio'
 								img={portfolio}
-								summary='Myself Portfolio Website using NextJS, Tailwind CSS, Framer Motion. 
-'
+								summary='Myself Portfolio Website using NextJS, Tailwind CSS, Framer Motion.'
 								link='https://www.annali.dev'
 								github='https://github.com/annali-SDE/anna-portfolio'
 								type='Featured Project'
+							/>
+						</div>
+						<div className='col-span-12'>
+							<FeaturedProject
+								title='Advanced Animations'
+								img={advancedAnimations}
+								summary='Examples of advanced animations using css and javascript.'
+								link='https://advanced-animations-222d541f94fc.herokuapp.com/'
+								github='https://github.com/annali-SDE/advanced-animations'
+								type='Mini Project'
 							/>
 						</div>
 						<div className='col-span-12'>
