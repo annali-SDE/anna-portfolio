@@ -8,6 +8,7 @@ import { GithubIcon } from '@/components/Icons';
 import portfolio from '../../public/images/projects/portfolio-pj.png';
 import aiImageGenerator from '../../public/images/projects/ai-image-generator.png';
 import advancedAnimations from '../../public/images/projects/advanced-animations.png';
+import eShop from '../../public/images/projects/e-shop.png';
 import { motion } from 'framer-motion';
 
 const FramerImage = motion(Image);
@@ -19,8 +20,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 			<Link
 				href={link}
 				target='_blank'
-				className='w-1/2 coursor-pointer overflow-hidden rounded-lg lg:w-full'
-			>
+				className='w-1/2 coursor-pointer overflow-hidden rounded-lg lg:w-full'>
 				<FramerImage
 					src={img}
 					alt={title}
@@ -38,9 +38,8 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 				<Link
 					href={link}
 					target='_blank'
-					className='hover:underline underline-offset-2'
-				>
-					<h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm'>
+					className='hover:underline underline-offset-2'>
+					<h2 className='my-2 w-full text-left text-xl font-bold dark:text-light sm:text-sm'>
 						{title}
 					</h2>
 				</Link>
@@ -51,13 +50,14 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 					<Link href={github} target='_blank' className='w-10'>
 						<GithubIcon />
 					</Link>
-					<Link
-						href={link}
-						target='_blank'
-						className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base'
-					>
-						Visit Project
-					</Link>
+					{link !== '' && (
+						<Link
+							href={link}
+							target='_blank'
+							className='ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base'>
+							Visit Project
+						</Link>
+					)}
 				</div>
 			</div>
 		</article>
@@ -84,7 +84,7 @@ const GithubProject = ({ type, title, summary, img, github }) => {
 				<span className='text-primary dark:text-primaryDark font-medium text-xl xs:text-base'>
 					{type}
 				</span>
-				<h2 className='my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm'>
+				<h2 className='my-2 w-full text-left text-xl font-bold dark:text-light sm:text-sm'>
 					{title}
 				</h2>
 				<p className='my-2 font-medium text-dark dark:text-light sm:text-sm'>
@@ -113,8 +113,18 @@ const projects = () => {
 						text='Code Today, Shape Tomorrow!'
 						className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl'
 					/>
-					<div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
-						<div className='col-span-12'>
+					<div className='grid grid-cols-10 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
+						<div className='col-span-5'>
+							<FeaturedProject
+								title='E-Commerce Website'
+								img={eShop}
+								summary='Next.js14, React.js, Typescript, Tailwind, Prisma, Stripe, Next Auth, MongoDB and firebase cloud.'
+								link='https://e-shop-beta-ten.vercel.app/'
+								github='https://github.com/annali-SDE/e-shop'
+								type='Featured Project'
+							/>
+						</div>
+						<div className='col-span-5'>
 							<FeaturedProject
 								title='Self Portfolio'
 								img={portfolio}
@@ -124,7 +134,7 @@ const projects = () => {
 								type='Featured Project'
 							/>
 						</div>
-						<div className='col-span-12'>
+						<div className='col-span-5'>
 							<FeaturedProject
 								title='Advanced Animations'
 								img={advancedAnimations}
@@ -134,11 +144,12 @@ const projects = () => {
 								type='Mini Project'
 							/>
 						</div>
-						<div className='col-span-12'>
-							<GithubProject
+						<div className='col-span-5'>
+							<FeaturedProject
 								title='AI Image Generator'
 								img={aiImageGenerator}
 								summary='Mini project using React and OpenAI API to generate images.'
+								link=''
 								github='https://github.com/annali-SDE/ai-image-generator'
 								type='Mini Project'
 							/>
